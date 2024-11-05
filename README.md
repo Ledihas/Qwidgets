@@ -104,8 +104,11 @@ Esta es una aplicación de escritorio simple desarrollada en C++ utilizando Qt, 
 
 **Ejemplo de código para insertar un nuevo registro:**
 
-   ```c++
-     query.prepare("INSERT INTO personas (nombre, edad, salario) VALUES (:nombre, :edad, :salario)");
+    ```c++
+    query.prepare("INSERT INTO personas (nombre, edad, salario) VALUES (:nombre, :edad, :salario)");
+
+
+
 
 ## Uso
 
