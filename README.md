@@ -37,11 +37,10 @@ Esta es una aplicación de escritorio simple desarrollada en C++ utilizando Qt, 
 
 ## Limitaciones
 
-<p>
 * **No hay edición de datos:** Los registros no pueden ser modificados una vez creados.
 * **No hay búsqueda:** No existe una función de búsqueda específica para encontrar registros.
 * **Validación básica:** Se realiza una validación simple para asegurar que el campo nombre no esté vacío.
-</p>
+
 
 
 ## Instalación
@@ -58,7 +57,7 @@ Esta es una aplicación de escritorio simple desarrollada en C++ utilizando Qt, 
    
 
 2. **Configurar Cmake:**
-  ```bash
+   ```bash
     mkdir build
     cd build
     cmake ..
@@ -66,7 +65,7 @@ Esta es una aplicación de escritorio simple desarrollada en C++ utilizando Qt, 
 
 
 3. **Compilar y ejecutar:**
-  ```bash
+   ```bash
     make
     ./qwidgect
    
@@ -106,7 +105,7 @@ Esta es una aplicación de escritorio simple desarrollada en C++ utilizando Qt, 
 **Ejemplo de código para insertar un nuevo registro:**
 
   ```c++
-query.prepare("INSERT INTO personas (nombre, edad, salario) VALUES (:nombre, :edad, :salario)");
+   query.prepare("INSERT INTO personas (nombre, edad, salario) VALUES (:nombre, :edad, :salario)");
 
 ## Uso
 
@@ -131,4 +130,3 @@ Las contribuciones son bienvenidas. Para contribuir, por favor, crea una bifurca
 # Correo
 
 - chuchua441@gmail.com
-# Qwidgets
