@@ -1,0 +1,9 @@
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/qwidgect.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/edit_cache.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/rebuild_cache.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/list_install_components.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/install.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/install/local.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/install/strip.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/qwidgect_autogen_timestamp_deps.dir
+/home/zaza/work space/developmentW/c++/qt/qwidgect/build/CMakeFiles/qwidgect_autogen.dir

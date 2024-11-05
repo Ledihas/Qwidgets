@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>OpenHandCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color:grey;
+	border-radius:400px;
+
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QTableWidget" name="tableWidget_Item_datas">
+     <property name="cursor" stdset="0">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget
+{
+	color:red;
+background-color:white;
+	selection-color:blue;
+	selection-background-color:green;
+	font: 700 italic 17pt &quot;Z003&quot;;
+	gridline-color:blue;
+}
+QTableWidget::item:selected
+{
+	color:white;
+	background-color:red;
+	font: 700 italic 11pt &quot;Z003&quot;;
+}
+QHeaderView::section
+{
+	border:none;
+	background-color:black;
+	color:white;
+	font: 700 italic 11pt &quot;Z003&quot;;
+}
+
+</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="font">
+      <font>
+       <family>URW Bookman</family>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+color:blue;
+
+background-color:#FFFFCC;
+border-radius:5px;
+padding: 5px;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Agregar Libro</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>779</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="boton">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font-family: Arial, sans-serif;
+            margin: 5;
+            padding:5;
+	border-left-color: rgb(0, 0, 0);
+            background-color:white;
+            border-radius: 5px;
+			  border-color:black;
+	border-bottom-color: rgb(0, 0, 0);
+			border-height: 10px;
+            
+
+}</string>
+       </property>
+       <property name="text">
+        <string>Agregar persona</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="eliminar">
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+font-family: Arial, sans-serif;
+            margin: 5;
+            padding:5;
+	border-left-color: rgb(0, 0, 0);
+            background-color:red;
+            border-radius: 5px;
+			  border-color:black;
+	border-bottom-color: rgb(0, 0, 0);
+			border-height: 10px;
+            
+
+}</string>
+       </property>
+       <property name="text">
+        <string>Elimiinar persona de tabla</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="8" column="0">
+    <widget class="QPushButton" name="Guardar_lib">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+color:blue;
+
+background-color:#CCFFCC;
+border-radius:5px;
+padding: 5px;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Guardar Tabla Libros</string>
+     </property>
+     <property name="icon">
+      <iconset theme="QIcon::ThemeIcon::DocumentSave"/>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="cursor" stdset="0">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget
+{
+	color:red;
+background-color:white;
+	selection-color:blue;
+	selection-background-color:green;
+	font: 700 italic 17pt &quot;Z003&quot;;
+	gridline-color:blue;
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="Guardar">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+color:blue;
+
+background-color:#CCFFCC;
+border-radius:5px;
+padding: 5px;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Guardar Tabla Personas</string>
+     </property>
+     <property name="icon">
+      <iconset theme="QIcon::ThemeIcon::DocumentSave"/>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
