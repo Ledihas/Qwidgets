@@ -69,8 +69,8 @@ include CMakeFiles/qwidgect_autogen_timestamp_deps.dir/progress.make
 CMakeFiles/qwidgect_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 CMakeFiles/qwidgect_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
 CMakeFiles/qwidgect_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.13
-CMakeFiles/qwidgect_autogen_timestamp_deps: /usr/lib/qt5/bin/uic
 CMakeFiles/qwidgect_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
+CMakeFiles/qwidgect_autogen_timestamp_deps: /usr/lib/qt5/bin/uic
 
 qwidgect_autogen_timestamp_deps: CMakeFiles/qwidgect_autogen_timestamp_deps
 qwidgect_autogen_timestamp_deps: CMakeFiles/qwidgect_autogen_timestamp_deps.dir/build.make

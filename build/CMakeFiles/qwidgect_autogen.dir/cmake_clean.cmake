@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/qwidgect_autogen"
+  "qwidgect_autogen/include/ui_eliminar.h"
   "qwidgect_autogen/include/ui_libdialog.h"
   "qwidgect_autogen/include/ui_persondialog.h"
   "qwidgect_autogen/include/ui_widget.h"

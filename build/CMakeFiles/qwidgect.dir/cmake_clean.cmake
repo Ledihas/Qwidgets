@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "qwidgect_autogen"
   "CMakeFiles/qwidgect.dir/database.cpp.o"
   "CMakeFiles/qwidgect.dir/database.cpp.o.d"
+  "CMakeFiles/qwidgect.dir/eliminar.cpp.o"
+  "CMakeFiles/qwidgect.dir/eliminar.cpp.o.d"
   "CMakeFiles/qwidgect.dir/libdialog.cpp.o"
   "CMakeFiles/qwidgect.dir/libdialog.cpp.o.d"
   "CMakeFiles/qwidgect.dir/main.cpp.o"

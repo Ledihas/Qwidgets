@@ -54,6 +54,41 @@ void InsertData(const QString &nombre, int edad, double salario) {
 
     db.close(); // Cerrar la conexión
 }
+
+void InsertDataLibro(const QString &nombre, int tomo, int folio) {
+    // Crear o abrir la base de datos
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("baseD.db"); // Nombre del archivo de la base de datos
+
+    if (!db.open()) {
+        qDebug() << "No se pudo abrir la base de datos.";
+        return;
+    }
+
+    qDebug() << "Conexión a SQLite establecida.";
+
+    // Crear una tabla si no existe
+    QSqlQuery query;
+    query.exec("CREATE TABLE IF NOT EXISTS libro ("
+               "nombre TEXT PRIMARY KEY, "
+               "tomo INTEGER, "
+               "folio INTEGER)");
+
+    // Preparar la inserción de datos
+    query.prepare("INSERT INTO libro (nombre, tomo, folio) VALUES (:nombre, :tomo, :folio)");
+    query.bindValue(":nombre", nombre);
+    query.bindValue(":tomo", tomo);
+    query.bindValue(":folio", folio);
+
+    // Ejecutar la inserción
+    if (query.exec()) {
+        qDebug() << "Datos insertados correctamente.";
+    } else {
+        qDebug() << "Error al insertar datos:" << query.lastError().text();
+    }
+
+    db.close(); // Cerrar la conexión
+}
 void DeleteData(const QString &nombre) {
     // Crear o abrir la base de datos
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -83,8 +118,35 @@ void DeleteData(const QString &nombre) {
         qDebug() << "Error al eliminar datos:" << query.lastError().text();
     }
 
+    db.close(); // Cerrar la conexión
+}
+void DeleteDataLib(const QString &nombre) {
+    // Crear o abrir la base de datos
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("baseD.db"); // Nombre del archivo de la base de datos
+
+    if (!db.open()) {
+        qDebug() << "No se pudo abrir la base de datos.";
+        return;
+    }
+
+    qDebug() << "Conexión a SQLite establecida.";
+
+    QSqlQuery query;
 
 
+    // Preparar la inserción de datos
+    query.prepare("DELETE FROM libro WHERE nombre = :nombre ");
+    query.bindValue(":nombre", nombre);
+
+
+
+    // Ejecutar laeliminacion
+    if (query.exec()) {
+        qDebug() << "Datos eliminados correctamente.";
+    } else {
+        qDebug() << "Error al eliminar datos:" << query.lastError().text();
+    }
 
     db.close(); // Cerrar la conexión
 }

@@ -117,9 +117,16 @@ void saveTableToFile(QTableWidget *tableWidget, QWidget *parent) {
     file.close(); // Cerrar el archivo
 }
 
+void crearTabla()
+{
+    connectToDatabase();
+    QSqlQuery query;
+    if (!query.exec("CREATE TABLE libro (nombre TEXT PRIMARY KEY, tomo INTEGER, folio INTEGER )")) qDebug() << "Hubo un fallo"<<query.lastError();
+}
 
 void Widget::on_Guardar_clicked()
 {
+
     saveTableToFile(ui->tableWidget, this);
 }
 
@@ -155,13 +162,43 @@ void Widget::populateTableWidget() {
         ui->tableWidget->setItem(row, 1, new QTableWidgetItem(QString::number(query.value(1).toInt()))); // Edad
         ui->tableWidget->setItem(row, 2, new QTableWidgetItem(QString::number(query.value(2).toDouble()))); // Salario
     }
+    ui->tableWidget_Item_datas->setRowCount(0); // Limpia las filas existentes
+    ui->tableWidget_Item_datas->setColumnCount(3); // Ajusta el número de columnas según tus datos
+    ui->tableWidget_Item_datas->setHorizontalHeaderLabels(QStringList() << "Nombre" << "Tomo" << "Folio"); // Nombres de las columnas
+
+    // Conectar a la base de datos
+    //connectToDatabase(); // Asegúrate de que esta función esté definida en tu archivo database.cpp
+
+    QSqlQuery query1("SELECT nombre, tomo, folio FROM libro");
+
+    if (!query1.exec()) {
+        qDebug() << "Error al ejecutar la consulta:" << query1.lastError().text();
+        return;
+    }
+    else {
+        qDebug() << "Consulta correctamente ejecutada";
+    }
+
+    // Llenar el QTableWidget con los resultados
+    while (query1.next()) {
+        int row = ui->tableWidget_Item_datas->rowCount(); // Obtener el número actual de filas
+        ui->tableWidget_Item_datas->insertRow(row); // Insertar una nueva fila
+
+        // Establecer los valores en las celdas del QTableWidget
+        ui->tableWidget_Item_datas->setItem(row, 0, new QTableWidgetItem(query1.value(0).toString())); // Nombre
+        ui->tableWidget_Item_datas->setItem(row, 1, new QTableWidgetItem(QString::number(query1.value(1).toInt()))); // Edad
+        ui->tableWidget_Item_datas->setItem(row, 2, new QTableWidgetItem(QString::number(query1.value(2).toInt()))); // Salario
+    }
 }
+
 
 
 void Widget::on_eliminar_clicked()
 {
     Eliminar eli;
     eli.exec();
+
     populateTableWidget();
+
 }
 

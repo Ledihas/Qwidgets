@@ -14,11 +14,11 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,15 +27,16 @@ class Ui_Widget
 {
 public:
     QGridLayout *gridLayout;
-    QSpacerItem *horizontalSpacer;
-    QVBoxLayout *verticalLayout;
-    QPushButton *boton;
-    QTableWidget *tableWidget;
     QFrame *line;
-    QPushButton *Guardar;
-    QPushButton *pushButton;
     QTableWidget *tableWidget_Item_datas;
+    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *boton;
+    QPushButton *eliminar;
     QPushButton *Guardar_lib;
+    QTableWidget *tableWidget;
+    QPushButton *Guardar;
 
     void setupUi(QWidget *Widget)
     {
@@ -52,96 +53,12 @@ public:
 ""));
         gridLayout = new QGridLayout(Widget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer, 2, 0, 1, 2);
-
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        boton = new QPushButton(Widget);
-        boton->setObjectName(QString::fromUtf8("boton"));
-        boton->setCursor(QCursor(Qt::PointingHandCursor));
-        boton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"font-family: Arial, sans-serif;\n"
-"            margin: 5;\n"
-"            padding:5;\n"
-"	border-left-color: rgb(0, 0, 0);\n"
-"            background-color:white;\n"
-"            border-radius: 5px;\n"
-"			  border-color:black;\n"
-"	border-bottom-color: rgb(0, 0, 0);\n"
-"			border-height: 10px;\n"
-"            \n"
-"\n"
-"}"));
-
-        verticalLayout->addWidget(boton);
-
-        tableWidget = new QTableWidget(Widget);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->viewport()->setProperty("cursor", QVariant(QCursor(Qt::IBeamCursor)));
-        tableWidget->setStyleSheet(QString::fromUtf8("QTableWidget\n"
-"{\n"
-"	color:red;\n"
-"background-color:white;\n"
-"	selection-color:blue;\n"
-"	selection-background-color:green;\n"
-"	font: 700 italic 17pt \"Z003\";\n"
-"	gridline-color:blue;\n"
-"}"));
-
-        verticalLayout->addWidget(tableWidget);
-
-
-        gridLayout->addLayout(verticalLayout, 1, 0, 1, 2);
-
         line = new QFrame(Widget);
         line->setObjectName(QString::fromUtf8("line"));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
-        gridLayout->addWidget(line, 0, 0, 1, 2);
-
-        Guardar = new QPushButton(Widget);
-        Guardar->setObjectName(QString::fromUtf8("Guardar"));
-        Guardar->setCursor(QCursor(Qt::PointingHandCursor));
-        Guardar->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"color:blue;\n"
-"\n"
-"background-color:#CCFFCC;\n"
-"border-radius:5px;\n"
-"padding: 5px;\n"
-"\n"
-"}"));
-        QIcon icon(QIcon::fromTheme(QString::fromUtf8("QIcon::ThemeIcon::DocumentSave")));
-        Guardar->setIcon(icon);
-        Guardar->setCheckable(false);
-        Guardar->setChecked(false);
-
-        gridLayout->addWidget(Guardar, 5, 1, 1, 1);
-
-        pushButton = new QPushButton(Widget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        QFont font;
-        font.setFamily(QString::fromUtf8("URW Bookman"));
-        font.setBold(true);
-        font.setItalic(true);
-        pushButton->setFont(font);
-        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton->setMouseTracking(false);
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"color:blue;\n"
-"\n"
-"background-color:#FFFFCC;\n"
-"border-radius:5px;\n"
-"padding: 5px;\n"
-"\n"
-"}"));
-
-        gridLayout->addWidget(pushButton, 3, 0, 1, 2);
+        gridLayout->addWidget(line, 1, 0, 1, 1);
 
         tableWidget_Item_datas = new QTableWidget(Widget);
         tableWidget_Item_datas->setObjectName(QString::fromUtf8("tableWidget_Item_datas"));
@@ -171,7 +88,76 @@ public:
 "\n"
 ""));
 
-        gridLayout->addWidget(tableWidget_Item_datas, 4, 0, 1, 2);
+        gridLayout->addWidget(tableWidget_Item_datas, 6, 0, 1, 1);
+
+        pushButton = new QPushButton(Widget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("URW Bookman"));
+        font.setBold(true);
+        font.setItalic(true);
+        pushButton->setFont(font);
+        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
+        pushButton->setMouseTracking(false);
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"color:blue;\n"
+"\n"
+"background-color:#FFFFCC;\n"
+"border-radius:5px;\n"
+"padding: 5px;\n"
+"\n"
+"}"));
+
+        gridLayout->addWidget(pushButton, 5, 0, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(779, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 4, 0, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        boton = new QPushButton(Widget);
+        boton->setObjectName(QString::fromUtf8("boton"));
+        boton->setCursor(QCursor(Qt::PointingHandCursor));
+        boton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"font-family: Arial, sans-serif;\n"
+"            margin: 5;\n"
+"            padding:5;\n"
+"	border-left-color: rgb(0, 0, 0);\n"
+"            background-color:white;\n"
+"            border-radius: 5px;\n"
+"			  border-color:black;\n"
+"	border-bottom-color: rgb(0, 0, 0);\n"
+"			border-height: 10px;\n"
+"            \n"
+"\n"
+"}"));
+
+        horizontalLayout->addWidget(boton);
+
+        eliminar = new QPushButton(Widget);
+        eliminar->setObjectName(QString::fromUtf8("eliminar"));
+        eliminar->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"font-family: Arial, sans-serif;\n"
+"            margin: 5;\n"
+"            padding:5;\n"
+"	border-left-color: rgb(0, 0, 0);\n"
+"            background-color:red;\n"
+"            border-radius: 5px;\n"
+"			  border-color:black;\n"
+"	border-bottom-color: rgb(0, 0, 0);\n"
+"			border-height: 10px;\n"
+"            \n"
+"\n"
+"}"));
+
+        horizontalLayout->addWidget(eliminar);
+
+
+        gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
 
         Guardar_lib = new QPushButton(Widget);
         Guardar_lib->setObjectName(QString::fromUtf8("Guardar_lib"));
@@ -185,9 +171,43 @@ public:
 "padding: 5px;\n"
 "\n"
 "}"));
+        QIcon icon(QIcon::fromTheme(QString::fromUtf8("QIcon::ThemeIcon::DocumentSave")));
         Guardar_lib->setIcon(icon);
 
-        gridLayout->addWidget(Guardar_lib, 5, 0, 1, 1);
+        gridLayout->addWidget(Guardar_lib, 8, 0, 1, 1);
+
+        tableWidget = new QTableWidget(Widget);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->viewport()->setProperty("cursor", QVariant(QCursor(Qt::IBeamCursor)));
+        tableWidget->setStyleSheet(QString::fromUtf8("QTableWidget\n"
+"{\n"
+"	color:red;\n"
+"background-color:white;\n"
+"	selection-color:blue;\n"
+"	selection-background-color:green;\n"
+"	font: 700 italic 17pt \"Z003\";\n"
+"	gridline-color:blue;\n"
+"}"));
+
+        gridLayout->addWidget(tableWidget, 2, 0, 1, 1);
+
+        Guardar = new QPushButton(Widget);
+        Guardar->setObjectName(QString::fromUtf8("Guardar"));
+        Guardar->setCursor(QCursor(Qt::PointingHandCursor));
+        Guardar->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"color:blue;\n"
+"\n"
+"background-color:#CCFFCC;\n"
+"border-radius:5px;\n"
+"padding: 5px;\n"
+"\n"
+"}"));
+        Guardar->setIcon(icon);
+        Guardar->setCheckable(false);
+        Guardar->setChecked(false);
+
+        gridLayout->addWidget(Guardar, 3, 0, 1, 1);
 
 
         retranslateUi(Widget);
@@ -198,10 +218,11 @@ public:
     void retranslateUi(QWidget *Widget)
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
-        boton->setText(QCoreApplication::translate("Widget", "Agregar", nullptr));
-        Guardar->setText(QCoreApplication::translate("Widget", "Guardar Tabla Personas", nullptr));
         pushButton->setText(QCoreApplication::translate("Widget", "Agregar Libro", nullptr));
+        boton->setText(QCoreApplication::translate("Widget", "Agregar persona", nullptr));
+        eliminar->setText(QCoreApplication::translate("Widget", "Elimiinar persona de tabla", nullptr));
         Guardar_lib->setText(QCoreApplication::translate("Widget", "Guardar Tabla Libros", nullptr));
+        Guardar->setText(QCoreApplication::translate("Widget", "Guardar Tabla Personas", nullptr));
     } // retranslateUi
 
 };

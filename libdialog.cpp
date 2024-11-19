@@ -1,10 +1,13 @@
 #include "libdialog.h"
 #include "ui_libdialog.h"
+#include "database.h"
+#include <qdebug.h>
 
 LibDialog::LibDialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::LibDialog)
 {
+
     ui->setupUi(this);
 }
 
@@ -15,6 +18,8 @@ LibDialog::~LibDialog()
 
 void LibDialog::on_buttonBox_accepted()
 {
+    InsertDataLibro(nombre(),tomo(),folio());
+    qDebug() << nombre() << tomo() << folio();
     accept();
 }
 

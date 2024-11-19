@@ -24,7 +24,6 @@ public:
     QLabel *label;
     QLineEdit *lineEdit;
     QPushButton *pushButton;
-    QPushButton *pushButton_2;
 
     void setupUi(QDialog *Eliminar)
     {
@@ -39,10 +38,7 @@ public:
         lineEdit->setGeometry(QRect(10, 70, 371, 26));
         pushButton = new QPushButton(Eliminar);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(50, 130, 121, 26));
-        pushButton_2 = new QPushButton(Eliminar);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(240, 130, 111, 26));
+        pushButton->setGeometry(QRect(160, 130, 88, 26));
 
         retranslateUi(Eliminar);
 
@@ -53,8 +49,7 @@ public:
     {
         Eliminar->setWindowTitle(QCoreApplication::translate("Eliminar", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("Eliminar", "Inserte el nombre del quien desea eliminar de la tabla", nullptr));
-        pushButton->setText(QCoreApplication::translate("Eliminar", "Elimina Persona", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Eliminar", "Elimina Libro", nullptr));
+        pushButton->setText(QCoreApplication::translate("Eliminar", "Elimina", nullptr));
     } // retranslateUi
 
 };

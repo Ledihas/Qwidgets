@@ -38,12 +38,12 @@ QT_MOC_LITERAL(2, 24, 0), // ""
 QT_MOC_LITERAL(3, 25, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(4, 47, 18), // "on_Guardar_clicked"
 QT_MOC_LITERAL(5, 66, 22), // "on_Guardar_lib_clicked"
-QT_MOC_LITERAL(6, 89, 19) // "populateTableWidget"
+QT_MOC_LITERAL(6, 89, 19) // "on_eliminar_clicked"
 
     },
     "Widget\0on_boton_clicked\0\0on_pushButton_clicked\0"
     "on_Guardar_clicked\0on_Guardar_lib_clicked\0"
-    "populateTableWidget"
+    "on_eliminar_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -87,7 +87,7 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 1: _t->on_pushButton_clicked(); break;
         case 2: _t->on_Guardar_clicked(); break;
         case 3: _t->on_Guardar_lib_clicked(); break;
-        case 4: _t->populateTableWidget(); break;
+        case 4: _t->on_eliminar_clicked(); break;
         default: ;
         }
     }

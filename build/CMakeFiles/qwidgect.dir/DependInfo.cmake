@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "qwidgect_autogen/timestamp" "custom" "qwidgect_autogen/deps"
   "/home/zaza/work space/developmentW/c++/qt/qwidgect/database.cpp" "CMakeFiles/qwidgect.dir/database.cpp.o" "gcc" "CMakeFiles/qwidgect.dir/database.cpp.o.d"
+  "/home/zaza/work space/developmentW/c++/qt/qwidgect/eliminar.cpp" "CMakeFiles/qwidgect.dir/eliminar.cpp.o" "gcc" "CMakeFiles/qwidgect.dir/eliminar.cpp.o.d"
   "/home/zaza/work space/developmentW/c++/qt/qwidgect/libdialog.cpp" "CMakeFiles/qwidgect.dir/libdialog.cpp.o" "gcc" "CMakeFiles/qwidgect.dir/libdialog.cpp.o.d"
   "/home/zaza/work space/developmentW/c++/qt/qwidgect/main.cpp" "CMakeFiles/qwidgect.dir/main.cpp.o" "gcc" "CMakeFiles/qwidgect.dir/main.cpp.o.d"
   "/home/zaza/work space/developmentW/c++/qt/qwidgect/persondialog.cpp" "CMakeFiles/qwidgect.dir/persondialog.cpp.o" "gcc" "CMakeFiles/qwidgect.dir/persondialog.cpp.o.d"

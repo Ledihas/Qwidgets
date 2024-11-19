@@ -224,6 +224,30 @@ database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qwidgect.dir/build.make CMakeFiles/qwidgect.dir/database.cpp.s
 .PHONY : database.cpp.s
 
+eliminar.o: eliminar.cpp.o
+.PHONY : eliminar.o
+
+# target to build an object file
+eliminar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qwidgect.dir/build.make CMakeFiles/qwidgect.dir/eliminar.cpp.o
+.PHONY : eliminar.cpp.o
+
+eliminar.i: eliminar.cpp.i
+.PHONY : eliminar.i
+
+# target to preprocess a source file
+eliminar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qwidgect.dir/build.make CMakeFiles/qwidgect.dir/eliminar.cpp.i
+.PHONY : eliminar.cpp.i
+
+eliminar.s: eliminar.cpp.s
+.PHONY : eliminar.s
+
+# target to generate assembly for a file
+eliminar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qwidgect.dir/build.make CMakeFiles/qwidgect.dir/eliminar.cpp.s
+.PHONY : eliminar.cpp.s
+
 libdialog.o: libdialog.cpp.o
 .PHONY : libdialog.o
 
@@ -362,6 +386,9 @@ help:
 	@echo "... database.o"
 	@echo "... database.i"
 	@echo "... database.s"
+	@echo "... eliminar.o"
+	@echo "... eliminar.i"
+	@echo "... eliminar.s"
 	@echo "... libdialog.o"
 	@echo "... libdialog.i"
 	@echo "... libdialog.s"

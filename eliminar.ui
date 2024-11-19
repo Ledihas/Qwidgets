@@ -39,14 +39,27 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>50</x>
      <y>130</y>
-     <width>88</width>
+     <width>121</width>
      <height>26</height>
     </rect>
    </property>
    <property name="text">
-    <string>Elimina</string>
+    <string>Elimina Persona</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>130</y>
+     <width>111</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Elimina Libro</string>
    </property>
   </widget>
  </widget>

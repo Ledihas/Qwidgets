@@ -157,7 +157,7 @@ font-family: Arial, sans-serif;
 }</string>
        </property>
        <property name="text">
-        <string>Elimiinar persona de tabla</string>
+        <string>Elimiinar elementos de tablas</string>
        </property>
       </widget>
      </item>

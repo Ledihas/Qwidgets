@@ -104,7 +104,7 @@ Esta es una aplicación de escritorio simple desarrollada en C++ utilizando Qt, 
 
 **Ejemplo de código para insertar un nuevo registro:**
 
-    ```c++
+    
     query.prepare("INSERT INTO personas (nombre, edad, salario) VALUES (:nombre, :edad, :salario)");
 
 
@@ -112,8 +112,8 @@ Esta es una aplicación de escritorio simple desarrollada en C++ utilizando Qt, 
 
 ## Uso
 
-    en proceso...
-    
+  En este video de YouTube: https://youtu.be/yHP4mS5udDI?si=xwm0JwT-CEvz0QDa
+  El proyecto sufrió de algunos cambios después del video, como por ejemplo, la tabla de Libros es capáz de cargarse desde una base de datos y realizar con ellas las mismas operaciones que se muestran en la tabla de Personas.
     
 ## Contribuciones
 
@@ -129,7 +129,8 @@ Las contribuciones son bienvenidas. Para contribuir, por favor, crea una bifurca
 
 
 # Autor
- ** *Ledihaz* **
+  *Ledihaz* 
 # Correo
 
 - chuchua441@gmail.com
+

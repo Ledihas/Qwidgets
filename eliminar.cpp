@@ -31,3 +31,17 @@ void Eliminar::on_pushButton_clicked()
 
 }
 
+
+
+void Eliminar::on_pushButton_2_clicked()
+{
+    if(ui->lineEdit->text().isEmpty())
+    {}
+    else{
+        DeleteDataLib(ui->lineEdit->text());
+
+        close();
+
+    }
+}
+
